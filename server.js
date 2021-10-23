@@ -20,6 +20,10 @@ app.use('/', function(req, res) {
   req.pipe(request({ qs: query , uri: url })).pipe(res);
 });
 
+app.use('/api', function(req, res) {
+  res.send('Hello World!');
+})
+
 
 //Start the server by listening on a port
 app.listen(port, () => {
